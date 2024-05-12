@@ -1,6 +1,4 @@
 import 'dart:convert';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
@@ -11,6 +9,7 @@ import 'package:test_task/screens/short_distance_screen.dart';
 import 'package:test_task/screens/subscription_screen.dart';
 
 import '../models/offer.dart';
+import '../widgets/bottom_sheet.dart';
 import '../widgets/offer_item.dart';
 
 class MainScreen extends StatefulWidget {
@@ -254,50 +253,6 @@ class _MainScreenState extends State<MainScreen> {
           const ProfilePage(),
         ],
       ),
-    );
-  }
-}
-
-class BottomSheetInfo extends StatelessWidget {
-  const BottomSheetInfo({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return BottomSheet(
-      onClosing: () {}, // Define the onClosing function as needed
-      builder: (BuildContext context) {
-        return Container(
-          color: Colors.black,
-          child: Column(
-            mainAxisSize: MainAxisSize.max,
-            children: <Widget>[
-              Container(
-                height: 6,
-                width: 50,
-                decoration: BoxDecoration(
-                  color: const Color(0xff3E3F43),
-                  borderRadius: BorderRadius.circular(20),
-                ),
-              ),
-              ListTile(
-                leading: const Icon(Icons.album),
-                title: const Text('Option 1'),
-                onTap: () {/* Handle option 1 */},
-              ),
-              ListTile(
-                leading: const Icon(Icons.album),
-                title: const Text('Option 2'),
-                onTap: () {/* Handle option 2 */},
-              ),
-              ListTile(
-                leading: const Icon(Icons.album),
-                title: const Text('Option 3'),
-                onTap: () {/* Handle option 3 */},
-              ),
-            ],
-          ),
-        );
-      },
     );
   }
 }
