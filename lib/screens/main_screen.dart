@@ -177,9 +177,7 @@ class _MainScreenState extends State<MainScreen> {
                                   ),
                                   child: Row(
                                     children: [
-                                      const SizedBox(
-                                        width: 10,
-                                      ),
+                                      const SizedBox(width: 10),
                                       SvgPicture.asset(
                                         "font/icons/search.svg",
                                         height: 32,
@@ -200,7 +198,8 @@ class _MainScreenState extends State<MainScreen> {
                                               style: TextStyle(
                                                   color: Colors.grey,
                                                   fontFamily: "SF_Pro_display",
-                                                  fontSize: 18),
+                                                  fontSize: 18,
+                                              ),
                                             ),
                                             Divider(
                                               color: Colors.grey,
